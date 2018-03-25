@@ -53,11 +53,11 @@ class ASCII {
       this.output.appendChild(document.createElement('span'));
       this.frameState.push(new Array(this.cols).fill(this.zero));
     }
-  // for (var i = 0; i < this.rows; i++) {
-  //     for (var j = 0; j < this.cols; j++) {
-  //         this.frameState[i][j] = Math.floor(120 * perlin(i / 20, j / 20, 0))
-  //     }
-  // }
+    // for (var i = 0; i < this.rows; i++) {
+    //   for (var j = 0; j < this.cols; j++) {
+    //       this.frameState[i][j] = Math.floor(5 * perlin(i / 2, j / 2, 0))
+    //   }
+    // }
   }
 
   draw() {
@@ -93,11 +93,11 @@ class ASCII {
     const shiftCoordsX = 0;
     const shiftCoordsY = 0;
     this.ctx.clearRect(0, 0, this.cols, this.rows);
-    this.ctx.fillStyle = '#ffffff';
+    this.ctx.fillStyle = '#000000';
     this.ctx.fillRect(0, 0, this.cols, this.rows);
     this.ctx.save();
 
-    this.ctx.globalAlpha = 0.3;
+    this.ctx.globalAlpha = 0.1;
     if (this.track && this.videoRation) {
       const shift = (this.cols - this.rows * this.videoRation / this.aspect) / 2;
       this.ctx.drawImage(this.video, shift, 0, this.rows * this.videoRation / this.aspect, this.rows);
