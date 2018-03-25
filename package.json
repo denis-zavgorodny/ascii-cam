@@ -1,0 +1,39 @@
+{
+    "name": "task-app",
+    "version": "1.0.0",
+    "description": "task wigdet",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "build:dev": "webpack --env=dev --progress --profile --colors",
+        "build:prod": "NODE_ENV=prod webpack --env=prod --progress --profile --colors",
+        "server": "webpack-dev-server"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+ssh://git@bitbucket.org/denis_zavgorodny/task-app.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "homepage": "https://bitbucket.org/denis_zavgorodny/task-app#readme",
+    "devDependencies": {
+        "babel": "^6.23.0",
+        "babel-core": "^6.25.0",
+        "babel-loader": "^7.1.1",
+        "babili-webpack-plugin": "^0.1.2",
+        "bitter-bbcode": "0.0.1",
+        "clean-webpack-plugin": "^0.1.16",
+        "css-loader": "^0.28.4",
+        "cssnano": "^3.10.0",
+        "eslint": "^4.19.1",
+        "eslint-config-airbnb-base": "^12.1.0",
+        "eslint-plugin-import": "^2.9.0",
+        "extract-text-webpack-plugin": "^2.1.2",
+        "html-webpack-plugin": "^2.29.0",
+        "optimize-css-assets-webpack-plugin": "^2.0.0",
+        "raw-loader": "^0.5.1",
+        "style-loader": "^0.18.2",
+        "webpack": "^3.0.0",
+        "webpack-dev-server": "^2.5.0"
+    }
+}
