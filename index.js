@@ -118,9 +118,12 @@ class ASCII {
   }
   getWebcam() {
     this.video = document.createElement('video');
-    navigator.getUserMedia({ video: true, audio: false }, (stream) => {
-      this.video.src = window.URL.createObjectURL(stream);
+    navigator.getUserMedia({ video: true, audio: false }, (stream) => {      
+      this.video.srcObject = stream;
+      // this.video.src = window.webkitURL.createObjectURL(stream);
       this.track = stream.getTracks()[0];
+      // document.body.appendChild(this.video);
+      this.video.play();
     }, (e) => {
       console.error('Rejected!', e);
     });
